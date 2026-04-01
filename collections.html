@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Collections | CHRONOS ELITE</title>
+    <meta name="description"
+        content="A definitive assembly of mechanical mastery. Explore timepieces that define generations." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#f9f9f9", "surface-container-low": "#f3f3f3", "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8", "surface-container-highest": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff", "on-surface": "#1a1c1c", "on-surface-variant": "#4e4639",
+                        "primary": "#5f5e5e", "primary-container": "#a7a5a4", "on-primary": "#ffffff",
+                        "secondary": "#775a19", "secondary-container": "#fed488", "on-secondary": "#ffffff",
+                        "outline": "#7f7667", "outline-variant": "#d1c5b4", "tertiary": "#5e5e5e",
+                        "inverse-surface": "#2f3131", "inverse-on-surface": "#f1f1f1",
+                    },
+                    fontFamily: { "serif": ["Noto Serif", "serif"], "sans": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-surface text-on-surface">
+
+    <!-- Page Loader -->
+    <div class="page-loader"><span class="loader-text">CHRONOS ELITE</span></div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="mobile-close-btn"><span
+                class="material-symbols-outlined text-2xl">close</span></button>
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav id="main-nav"
+        class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-md flex justify-between items-center px-6 md:px-10 py-5 transition-all duration-300">
+        <a href="index.html" class="text-2xl font-serif tracking-widest text-on-surface">CHRONOS ELITE</a>
+        <div class="hidden md:flex gap-10 items-center">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="collections.html">Collections</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-5">
+            <button class="text-on-surface hover:text-secondary transition-colors"><span
+                    class="material-symbols-outlined">search</span></button>
+            <button class="text-on-surface hover:text-secondary transition-colors"><span
+                    class="material-symbols-outlined">shopping_bag</span></button>
+            <button class="md:hidden text-on-surface" id="mobile-menu-btn"><span
+                    class="material-symbols-outlined">menu</span></button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-36 md:pt-40 pb-16 md:pb-20 px-6 md:px-10 bg-surface">
+        <div class="max-w-7xl mx-auto" data-animate="fade-up">
+            <span class="font-sans text-xs tracking-[0.3em] text-secondary uppercase mb-4 block">Exquisite
+                Curation</span>
+            <h1 class="font-serif text-5xl md:text-8xl text-on-surface leading-none mb-8">The Collections</h1>
+            <p class="font-sans text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                A definitive assembly of mechanical mastery. From the depth of the ocean to the peaks of heritage,
+                explore timepieces that define generations.
+            </p>
+        </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <section class="sticky top-20 z-40 bg-surface py-5 md:py-6 px-6 md:px-10 border-b border-outline-variant/10"
+        data-animate="fade-in">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4 md:gap-6">
+            <div class="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar">
+                <button
+                    class="font-sans text-xs tracking-widest uppercase text-secondary font-bold whitespace-nowrap">All
+                    Series</button>
+                <button
+                    class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Heritage</button>
+                <button
+                    class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Expedition</button>
+                <button
+                    class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Modernist</button>
+                <button
+                    class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Limited
+                    Edition</button>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="font-sans text-xs text-outline italic hidden md:inline">Showing 12 Masterpieces</span>
+                <button
+                    class="flex items-center gap-2 font-sans text-xs tracking-widest uppercase border border-outline/20 px-4 py-2 hover:bg-surface-container-low transition-colors">
+                    Filter <span class="material-symbols-outlined text-sm">tune</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Collections Grid -->
+    <main class="px-6 md:px-10 py-16 md:py-20 bg-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-24 gap-x-8 md:gap-x-12">
+
+            <!-- Product 1: Large Featured -->
+            <div class="md:col-span-8 group cursor-pointer" data-animate="fade-up" data-product="grand-sovereign-xvii">
+                <div class="aspect-[16/9] overflow-hidden bg-surface-container-low mb-8 relative">
+                    <img alt="Grand Sovereign XVII"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWBTaa1lAeGVSatFCt_JfbwPZQJRFgF-zEzUjpV_M2wEfyNzKrY1IH2ccq2EUjRHWQqEqZm74TEe3d3wSYpxtMv8BytWvW5C09B9z2Rgd8VXRCMaKwXGPtxDC2lY23_hbyPE3J7a2DYxYn1a9iexmNpl2ZHr6vAnA6zLr-tw8CPU6SDhai975UD8n78S8h8sfF64I37UrrrE8QyyV5H0ADGcAs4RcN0gdiLYR8E0gePo7PdKtUS_jQ1wlcY4DZAKNJ1Viiul4k" />
+                    <div
+                        class="absolute top-6 left-6 bg-secondary text-white text-[10px] tracking-widest uppercase px-3 py-1">
+                        Featured</div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                    <div>
+                        <span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Heritage
+                            Series</span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-on-surface mb-2">Grand Sovereign XVII</h2>
+                        <p class="font-sans text-sm text-on-surface-variant max-w-lg">Automatic movement with 72-hour
+                            power reserve. Hand-finished 18k rose gold casing with a genuine obsidian dial.</p>
+                    </div>
+                    <div class="md:text-right">
+                        <span class="font-sans text-xl font-light text-on-surface">$24,500</span>
+                        <button class="block mt-4 btn-link">Request Private Viewing</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Side Column -->
+            <div class="md:col-span-4 group cursor-pointer md:mt-24" data-animate="fade-up" data-delay="200"
+                data-product="linear-steel-v2">
+                <div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8">
+                    <img alt="Linear Steel v2"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHLh4THDcvuDyv9OT3dwTkVlb5Yk7y3qqpoZCnQfBaHvF0gnn_Sw7zjJCtGTauKUxRrac5nb2CmIsxGPTeoLbbG5sHIsVl1wz_LN6spCmGvoYMvKTMIW4xmIkHVYcL7WBYBFcIzFF1UjhOeIHaqw-9TgqJ4_knuMB1TJ7KlA-bG7enEV0TKYLX66L75ht5lrGnnv4_Gi22Wtq-sXzw-VAxpHs9ehyLk4ekBNpCAAvZbv4WnfZhfQuMmE1TIzCm9ncYcggS3bv8" />
+                </div>
+                <span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Modernist</span>
+                <h2 class="font-serif text-2xl text-on-surface mb-2">Linear Steel v2</h2>
+                <p class="font-sans text-sm text-on-surface-variant mb-4">Precision-engineered for the urban landscape.
+                    Brushed titanium finish.</p>
+                <span class="font-sans text-lg font-light text-on-surface">$8,200</span>
+            </div>
+
+            <!-- Content Canvas -->
+            <div class="col-span-full py-12 md:py-20 px-6 md:px-12 bg-surface-container-low my-8 md:my-12 flex flex-col md:flex-row items-center gap-10 md:gap-16"
+                data-animate="scale-in">
+                <div class="md:w-1/2">
+                    <h3 class="font-serif text-4xl md:text-5xl text-on-surface mb-6 leading-tight">The Art of the
+                        Caliber</h3>
+                    <p class="font-sans text-on-surface-variant leading-relaxed mb-8">
+                        Behind every Chronos Elite dial lies a world of microscopic perfection. Our movements are
+                        assembled by hand in our Swiss workshop, where traditional horology meets avant-garde material
+                        science.
+                    </p>
+                    <a href="about.html" class="btn-primary">Discover Our Craft</a>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div
+                        class="w-full aspect-square bg-surface-container-lowest p-4 md:p-8 flex items-center justify-center">
+                        <img alt="Watch movement" class="w-full h-full object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvebaFY6ecScGnPMp_FyQNvH2LQvWuCZ4_k630D4IgO06nRS73NShUi7-az2mS4K79Co81R3GkMxMeOqII9ukDgGV5mIotvsCxdzyxVswZ68rSW95fFC-akgQycS-pV01uOv2oMb6Qr9aTNhTyNsVkNqM0AAGSAtDnt3w4bSTbxncuH2zG-_Z3SvP_vgNTu9u8jbFezuVdEeSzOMhjt_kRjk6nj9TbnXDAGiRXM_qDKGgOBzEjidT9aq8I5EvTJ712TLArQb28" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid Row (3 columns) -->
+            <div class="md:col-span-4 product-card group cursor-pointer" data-animate="fade-up"
+                data-product="terra-incognita">
+                <div class="aspect-square overflow-hidden bg-surface-container-low mb-8 relative">
+                    <img alt="Terra Incognita"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnzXR93zRA3aaKFHE5Zyf7603JDMeyKrSBITZpj81ctmO7q9hia696AVd_1HjVYklOdDS9wrVm1cUHH4LM1GGMepZkjvu_cXtZsjAHZjp0L4tV81WESozPmXUnT6hoFRXZPFrLq6UkeWRTe14MNlQ5uzsLL8i-oQKV4x5BqtHxpLJZgoT53YmahG8eZjq2e9Btcn1L0AZMl9XsjSxgmYfPmEWb97Ry4L-UiZSNaWdb-o-W0pSLbqmyBw7BPld0mJF3uvq80PMD" />
+                </div>
+                <span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Expedition</span>
+                <h2 class="font-serif text-2xl text-on-surface mb-2">Terra Incognita</h2>
+                <span class="font-sans text-lg font-light text-on-surface">$12,900</span>
+            </div>
+            <div class="md:col-span-4 product-card group cursor-pointer" data-animate="fade-up" data-delay="150"
+                data-product="chronicle-gmt">
+                <div class="aspect-square overflow-hidden bg-surface-container-low mb-8">
+                    <img alt="Chronicle GMT"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuClPkrDYhbMRb17rwiJU16_8IyqZI_riMlzwOI5g6YCtlAm4DZ9Yiuv-ORwqAtFxCvyRj5sEIb6NgFL92K79ZTifLUsF2qN-CeL_3fAivbaCZjfw9IEmWqiDj6HE33DlDowT2Ss689DAHeEDdKTiyLj5n2VtgWjxP8jFY0sScQVrRczW1dP00Hw9V8-S1QfbXl-s2MBE1LkCviEMGZH9eH9NRPbW_Vg7ZFZhZqUclKTkh86JiBqz32sTUoMSv2vNWbHukBzLtbd" />
+                </div>
+                <span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Heritage</span>
+                <h2 class="font-serif text-2xl text-on-surface mb-2">Chronicle GMT</h2>
+                <span class="font-sans text-lg font-light text-on-surface">$15,400</span>
+            </div>
+            <div class="md:col-span-4 product-card group cursor-pointer" data-animate="fade-up" data-delay="300"
+                data-product="void-core-skeleton">
+                <div class="aspect-square overflow-hidden bg-surface-container-low mb-8 relative">
+                    <img alt="Void Core Skeleton"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNOkdyRJ0Mia0xjxCxQoJIuwXd06UwvvYRpGiB3ztNh7hZodmevHjUUg8YdCN607bjKHWc1ZNBmQ_3NDk_b8rBGv22Z_vRs5TNU_S2DuZ6bWPQO4nW4LJElzE-OE9t2NDkU-FoFCSZhQ6y7W1Ttm8rd2m1alPBX1GZEhsagj3AX0HvCbmNLhLad5ILi2rvu4SjWWGQFwkHQusyQOYVJvEFU_bRLtgxKj0XwxjRoK7hQDKMb-iDQDjyocNdI-EEQBSi1jQiT4J6" />
+                    <div
+                        class="absolute bottom-4 right-4 bg-on-surface text-surface text-[10px] tracking-widest uppercase px-3 py-1">
+                        Sold Out</div>
+                </div>
+                <span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Modernist</span>
+                <h2 class="font-serif text-2xl text-on-surface mb-2">Void Core Skeleton</h2>
+                <span class="font-sans text-lg font-light text-on-surface">$31,000</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="py-24 md:py-32 bg-surface-container-low text-center px-6 md:px-10" data-animate="fade-up">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-4xl text-on-surface mb-6">Join the Elite Circle</h2>
+            <p class="font-sans text-on-surface-variant mb-10">Receive exclusive early access to our most limited
+                releases and curated horological insights.</p>
+            <form class="flex flex-col md:flex-row gap-0">
+                <input
+                    class="flex-grow bg-surface border-0 border-b border-outline-variant py-4 px-6 focus:ring-0 focus:border-secondary font-sans text-xs tracking-widest"
+                    placeholder="YOUR EMAIL ADDRESS" type="email" />
+                <button class="btn-cta mt-4 md:mt-0 justify-center">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low w-full">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-10 py-16 md:py-20 w-full" data-animate="fade-up">
+            <div>
+                <div class="font-serif text-xl text-on-surface mb-6">CHRONOS ELITE</div>
+                <p class="font-sans text-sm tracking-tight text-primary leading-relaxed">
+                    Defining the pinnacle of timekeeping since 1884. Precision in every heartbeat, luxury in every
+                    second.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Explore</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="collections.html">Heritage Series</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="collections.html">Expedition Tools</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="collections.html">Modernist Icons</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="collections.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="contact.html">Service &amp; Repair</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="#">Warranty Info</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="#">Shipping &amp; Boutique Pickup</a></li>
+                    <li><a class="font-sans text-sm tracking-tight text-primary hover:text-on-surface transition-colors"
+                            href="contact.html">Contact Concierge</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Social</h4>
+                <div class="flex gap-4">
+                    <a class="material-symbols-outlined text-primary hover:text-on-surface transition-colors"
+                        href="#">public</a>
+                    <a class="material-symbols-outlined text-primary hover:text-on-surface transition-colors"
+                        href="#">camera</a>
+                    <a class="material-symbols-outlined text-primary hover:text-on-surface transition-colors"
+                        href="#">movie</a>
+                </div>
+                <p class="mt-12 font-sans text-[10px] tracking-widest text-primary uppercase opacity-80">© 2024 CHRONOS
+                    ELITE. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal-overlay" id="product-modal-overlay">
+        <div class="product-modal">
+            <button class="product-modal-close" id="modal-close-btn"><span
+                    class="material-symbols-outlined">close</span></button>
+            <div class="product-modal-body">
+                <div class="product-modal-image"><img id="modal-image" src="" alt="" /></div>
+                <div class="product-modal-info">
+                    <p class="product-modal-series" id="modal-series"></p>
+                    <h2 class="product-modal-name" id="modal-name"></h2>
+                    <p class="product-modal-price" id="modal-price"></p>
+                    <p class="product-modal-desc" id="modal-desc"></p>
+                    <div class="product-modal-specs">
+                        <h4>Technical Specifications</h4>
+                        <div id="modal-specs-list"></div>
+                    </div>
+                    <div class="product-modal-actions">
+                        <button class="btn-primary" onclick="closeProductModal()">Request Viewing</button>
+                        <button class="btn-ghost" onclick="closeProductModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

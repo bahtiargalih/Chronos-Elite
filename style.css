@@ -1,0 +1,823 @@
+/* =============================================
+   CHRONOS ELITE — Design System & Animations
+   ============================================= */
+
+/* --- CSS Custom Properties (Design Tokens) --- */
+:root {
+    --color-surface: #f9f9f9;
+    --color-surface-container-low: #f3f3f3;
+    --color-surface-container: #eeeeee;
+    --color-surface-container-high: #e8e8e8;
+    --color-surface-container-highest: #e2e2e2;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-surface: #1a1c1c;
+    --color-on-surface-variant: #4e4639;
+    --color-primary: #5f5e5e;
+    --color-primary-container: #a7a5a4;
+    --color-on-primary: #ffffff;
+    --color-secondary: #775a19;
+    --color-secondary-container: #fed488;
+    --color-on-secondary: #ffffff;
+    --color-outline: #7f7667;
+    --color-outline-variant: #d1c5b4;
+    --color-tertiary: #5e5e5e;
+    --color-inverse-surface: #2f3131;
+
+    --font-headline: 'Noto Serif', serif;
+    --font-body: 'Manrope', sans-serif;
+
+    --transition-fast: 200ms ease;
+    --transition-normal: 350ms ease;
+    --transition-slow: 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Global Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-surface);
+    font-family: var(--font-body);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+    font-family: var(--font-headline);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-outline-variant);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-outline);
+}
+
+/* =============================================
+   BUTTON HOVER ANIMATIONS
+   ============================================= */
+
+/* --- Primary Button (solid background) --- */
+.btn-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 1rem 3rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-on-surface);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 28, 28, 0.15);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: none;
+}
+
+.btn-primary .material-symbols-outlined {
+    transition: transform var(--transition-normal);
+}
+
+.btn-primary:hover .material-symbols-outlined {
+    transform: translateX(4px);
+}
+
+/* --- CTA Button (dark/inverted) --- */
+.btn-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-on-surface);
+    color: var(--color-surface);
+    padding: 1.25rem 3rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.btn-cta:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(119, 90, 25, 0.2);
+}
+
+.btn-cta:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* --- Ghost Button (outlined) --- */
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: transparent;
+    color: var(--color-on-surface);
+    padding: 1.25rem 3rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--color-outline-variant);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-ghost:hover {
+    background-color: var(--color-surface-container-high);
+    border-color: var(--color-outline);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 28, 28, 0.08);
+}
+
+.btn-ghost:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* --- Link Button (text underline) --- */
+.btn-link {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-secondary);
+    padding-bottom: 4px;
+    transition: all var(--transition-normal);
+}
+
+.btn-link:hover {
+    color: var(--color-on-surface);
+    border-bottom-color: var(--color-on-surface);
+    padding-bottom: 6px;
+}
+
+/* --- Nav link hover --- */
+.nav-link {
+    position: relative;
+    color: var(--color-on-surface);
+    text-decoration: none;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    transition: color var(--transition-normal);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--color-secondary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* =============================================
+   SCROLL ANIMATION KEYFRAMES
+   ============================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Scroll Animation Classes --- */
+/* Elements start hidden, become visible when IntersectionObserver triggers */
+
+[data-animate] {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+[data-animate].is-visible {
+    animation-fill-mode: both;
+}
+
+[data-animate="fade-up"].is-visible {
+    animation: fadeInUp 0.8s var(--transition-slow) forwards;
+}
+
+[data-animate="fade-left"].is-visible {
+    animation: fadeInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-animate="fade-right"].is-visible {
+    animation: fadeInRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-animate="scale-in"].is-visible {
+    animation: scaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-animate="fade-in"].is-visible {
+    animation: fadeIn 1s ease forwards;
+}
+
+[data-animate="slide-up"].is-visible {
+    animation: slideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger animation delays for children */
+[data-stagger]>*:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+[data-stagger]>*:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+[data-stagger]>*:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+[data-stagger]>*:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+[data-stagger]>*:nth-child(5) {
+    transition-delay: 400ms;
+}
+
+[data-stagger]>*:nth-child(6) {
+    transition-delay: 500ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(2) {
+    animation-delay: 120ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(3) {
+    animation-delay: 240ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(4) {
+    animation-delay: 360ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(5) {
+    animation-delay: 480ms;
+}
+
+[data-stagger]>[data-animate]:nth-child(6) {
+    animation-delay: 600ms;
+}
+
+/* =============================================
+   PRODUCT CARD HOVER EFFECTS
+   ============================================= */
+
+.product-card {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(26, 28, 28, 0.06);
+}
+
+.product-card img {
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+/* =============================================
+   BOUTIQUE CARD HOVER
+   ============================================= */
+
+.boutique-card {
+    transition: transform var(--transition-normal);
+}
+
+.boutique-card:hover {
+    transform: translateY(-4px);
+}
+
+.boutique-card img {
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.boutique-card:hover img {
+    transform: scale(1.08);
+}
+
+/* =============================================
+   WORKSHOP CARD HOVER
+   ============================================= */
+
+.workshop-card {
+    transition: background-color 0.5s ease, transform var(--transition-normal);
+}
+
+.workshop-card:hover {
+    background-color: var(--color-on-surface) !important;
+    transform: translateY(-4px);
+}
+
+.workshop-card:hover h4,
+.workshop-card:hover span {
+    color: var(--color-surface) !important;
+}
+
+.workshop-card:hover p {
+    color: var(--color-surface-container-high) !important;
+}
+
+/* =============================================
+   ARTISAN GALLERY HOVER
+   ============================================= */
+
+.artisan-img {
+    transition: filter 0.7s ease, transform 0.7s ease;
+    filter: grayscale(100%);
+}
+
+.artisan-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* =============================================
+   MOBILE NAV
+   ============================================= */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--color-surface);
+    z-index: 100;
+    padding: 6rem 2.5rem;
+    transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-menu a {
+    display: block;
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    color: var(--color-on-surface);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color var(--transition-normal);
+}
+
+.mobile-menu a:hover {
+    color: var(--color-secondary);
+}
+
+.mobile-menu .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-on-surface);
+}
+
+/* =============================================
+   MISCELLANEOUS
+   ============================================= */
+
+/* Gold accent divider */
+.gold-divider {
+    width: 5rem;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border: none;
+}
+
+/* Section separator with spacing */
+.section-gap {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+/* Form input focus glow */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-secondary) !important;
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Image grayscale hover for editorial */
+.editorial-img {
+    filter: grayscale(20%);
+    transition: filter 0.5s ease;
+}
+
+.editorial-img:hover {
+    filter: grayscale(0%);
+}
+
+/* Loading animation for the page */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-surface);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.page-loader .loader-text {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    color: var(--color-on-surface);
+    animation: fadeIn 1s ease infinite alternate;
+}
+
+/* =============================================
+   PRODUCT DETAIL MODAL
+   ============================================= */
+
+.product-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.product-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.product-modal {
+    background: var(--color-surface);
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(40px) scale(0.96);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.product-modal-overlay.active .product-modal {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.product-modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--color-surface-container-low);
+    border: none;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.product-modal-close:hover {
+    background: var(--color-on-surface);
+    color: var(--color-surface);
+    transform: rotate(90deg);
+}
+
+.product-modal-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 768px) {
+    .product-modal-body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product-modal-image {
+    background: var(--color-surface-container-low);
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-modal-image:hover img {
+    transform: scale(1.05);
+}
+
+.product-modal-info {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-modal-series {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.product-modal-name {
+    font-family: var(--font-headline);
+    font-size: 2rem;
+    color: var(--color-on-surface);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.product-modal-price {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.product-modal-desc {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-on-surface-variant);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.product-modal-specs {
+    margin-bottom: 2rem;
+}
+
+.product-modal-specs h4 {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-on-surface);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(209, 197, 180, 0.2);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    color: var(--color-outline);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+}
+
+.spec-value {
+    color: var(--color-on-surface);
+    font-weight: 500;
+    text-align: right;
+}
+
+.product-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Hide scrollbar when modal is open */
+body.modal-open {
+    overflow: hidden;
+}

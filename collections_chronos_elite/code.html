@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f9f9f9",
+              "on-primary-fixed-variant": "#474746",
+              "surface-tint": "#5f5e5e",
+              "secondary-fixed": "#ffdea5",
+              "surface-container-low": "#f3f3f3",
+              "surface-container": "#eeeeee",
+              "tertiary-container": "#a6a5a5",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-primary-container": "#3b3b3b",
+              "on-surface": "#1a1c1c",
+              "on-secondary-container": "#785a1a",
+              "on-surface-variant": "#4e4639",
+              "on-tertiary-fixed-variant": "#464747",
+              "error": "#ba1a1a",
+              "background": "#f9f9f9",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dadada",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-bright": "#f9f9f9",
+              "surface-container-high": "#e8e8e8",
+              "inverse-surface": "#2f3131",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#3a3b3b",
+              "tertiary-fixed": "#e4e2e2",
+              "secondary-container": "#fed488",
+              "primary-fixed": "#e5e2e1",
+              "on-secondary-fixed": "#261900",
+              "tertiary": "#5e5e5e",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#1c1b1b",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-tertiary": "#ffffff",
+              "primary": "#5f5e5e",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "inverse-primary": "#c8c6c5",
+              "outline": "#7f7667",
+              "secondary": "#775a19",
+              "primary-container": "#a7a5a4",
+              "secondary-fixed-dim": "#e9c176",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#c8c6c5",
+              "outline-variant": "#d1c5b4"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            font-family: 'Manrope', sans-serif;
+        }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .font-sans { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 dark:bg-[#1a1c1c]/80 backdrop-blur-md flex justify-between items-center px-10 py-6 w-full max-w-full">
+<div class="text-2xl font-serif tracking-widest text-[#1a1c1c] dark:text-[#f9f9f9]">CHRONOS ELITE</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-sans text-sm tracking-widest text-[#1a1c1c] dark:text-[#f9f9f9] hover:text-[#775a19] transition-colors" href="#">Home</a>
+<a class="font-sans text-sm tracking-widest text-[#775a19] border-b-2 border-[#775a19] pb-1" href="#">Collections</a>
+<a class="font-sans text-sm tracking-widest text-[#1a1c1c] dark:text-[#f9f9f9] hover:text-[#775a19] transition-colors" href="#">About</a>
+<a class="font-sans text-sm tracking-widest text-[#1a1c1c] dark:text-[#f9f9f9] hover:text-[#775a19] transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#775a19] transition-colors" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#775a19] transition-colors" data-icon="shopping_bag">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined text-[#5f5e5e]" data-icon="menu">menu</button>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="pt-40 pb-20 px-10 bg-surface">
+<div class="max-w-7xl mx-auto">
+<span class="font-sans text-xs tracking-[0.3em] text-secondary uppercase mb-4 block">Exquisite Curation</span>
+<h1 class="font-serif text-6xl md:text-8xl text-on-surface leading-none mb-8">The Collections</h1>
+<p class="font-sans text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                A definitive assembly of mechanical mastery. From the depth of the ocean to the peaks of heritage, explore timepieces that define generations.
+            </p>
+</div>
+</header>
+<!-- Filter Bar (The Curated Selection) -->
+<section class="sticky top-20 z-40 bg-surface py-6 px-10 border-b border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-6">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<button class="font-sans text-xs tracking-widest uppercase text-secondary font-bold whitespace-nowrap">All Series</button>
+<button class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Heritage</button>
+<button class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Expedition</button>
+<button class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Modernist</button>
+<button class="font-sans text-xs tracking-widest uppercase text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap">Limited Edition</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-sans text-xs text-outline italic">Showing 12 Masterpieces</span>
+<button class="flex items-center gap-2 font-sans text-xs tracking-widest uppercase border border-outline/20 px-4 py-2 hover:bg-surface-container-low transition-colors">
+                    Filter <span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Collections Grid (Asymmetrical Layout) -->
+<main class="px-10 py-20 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-24 gap-x-12">
+<!-- Product 1: Large Featured (Asymmetric Span) -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury Gold Watch Close-up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of a high-end gold watch with intricate mechanical details and a black leather strap against a moody dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWBTaa1lAeGVSatFCt_JfbwPZQJRFgF-zEzUjpV_M2wEfyNzKrY1IH2ccq2EUjRHWQqEqZm74TEe3d3wSYpxtMv8BytWvW5C09B9z2Rgd8VXRCMaKwXGPtxDC2lY23_hbyPE3J7a2DYxYn1a9iexmNpl2ZHr6vAnA6zLr-tw8CPU6SDhai975UD8n78S8h8sfF64I37UrrrE8QyyV5H0ADGcAs4RcN0gdiLYR8E0gePo7PdKtUS_jQ1wlcY4DZAKNJ1Viiul4k"/>
+<div class="absolute top-6 left-6 bg-secondary text-white text-[10px] tracking-widest uppercase px-3 py-1">Featured</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start gap-4">
+<div>
+<span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Heritage Series</span>
+<h2 class="font-serif text-4xl text-on-surface mb-2">Grand Sovereign XVII</h2>
+<p class="font-sans text-sm text-on-surface-variant max-w-lg">Automatic movement with 72-hour power reserve. Hand-finished 18k rose gold casing with a genuine obsidian dial.</p>
+</div>
+<div class="text-right">
+<span class="font-sans text-xl font-light text-on-surface">$24,500</span>
+<button class="block mt-4 text-xs tracking-[0.2em] uppercase font-bold border-b border-secondary text-secondary pb-1 hover:text-on-surface hover:border-on-surface transition-all">Request Private Viewing</button>
+</div>
+</div>
+</div>
+<!-- Product 2: Side Column -->
+<div class="md:col-span-4 group cursor-pointer md:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8">
+<img alt="Modern Minimalist Watch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist mechanical watch with a silver face and navy blue fabric strap on a clean light grey surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHLh4THDcvuDyv9OT3dwTkVlb5Yk7y3qqpoZCnQfBaHvF0gnn_Sw7zjJCtGTauKUxRrac5nb2CmIsxGPTeoLbbG5sHIsVl1wz_LN6spCmGvoYMvKTMIW4xmIkHVYcL7WBYBFcIzFF1UjhOeIHaqw-9TgqJ4_knuMB1TJ7KlA-bG7enEV0TKYLX66L75ht5lrGnnv4_Gi22Wtq-sXzw-VAxpHs9ehyLk4ekBNpCAAvZbv4WnfZhfQuMmE1TIzCm9ncYcggS3bv8"/>
+</div>
+<span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Modernist</span>
+<h2 class="font-serif text-2xl text-on-surface mb-2">Linear Steel v2</h2>
+<p class="font-sans text-sm text-on-surface-variant mb-4">Precision-engineered for the urban landscape. Brushed titanium finish.</p>
+<span class="font-sans text-lg font-light text-on-surface">$8,200</span>
+</div>
+<!-- Horizontal Section Shift: Content Canvas -->
+<div class="col-span-full py-20 px-12 bg-surface-container-low my-12 flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<h3 class="font-serif text-5xl text-on-surface mb-6 leading-tight">The Art of the Caliber</h3>
+<p class="font-sans text-on-surface-variant leading-relaxed mb-8">
+                        Behind every Chronos Elite dial lies a world of microscopic perfection. Our movements are assembled by hand in our Swiss workshop, where traditional horology meets avant-garde material science.
+                    </p>
+<button class="px-10 py-4 bg-primary text-on-primary font-sans text-xs tracking-widest uppercase hover:bg-on-surface transition-colors">Discover Our Craft</button>
+</div>
+<div class="md:w-1/2 relative">
+<div class="w-full aspect-square bg-surface-container-lowest p-8 flex items-center justify-center">
+<img alt="Watch movement" class="w-full h-full object-contain" data-alt="extreme close-up of intricate mechanical watch gears and springs showing precision engineering and craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvebaFY6ecScGnPMp_FyQNvH2LQvWuCZ4_k630D4IgO06nRS73NShUi7-az2mS4K79Co81R3GkMxMeOqII9ukDgGV5mIotvsCxdzyxVswZ68rSW95fFC-akgQycS-pV01uOv2oMb6Qr9aTNhTyNsVkNqM0AAGSAtDnt3w4bSTbxncuH2zG-_Z3SvP_vgNTu9u8jbFezuVdEeSzOMhjt_kRjk6nj9TbnXDAGiRXM_qDKGgOBzEjidT9aq8I5EvTJ712TLArQb28"/>
+</div>
+</div>
+</div>
+<!-- Product 3: Expedition Series (3 Column Grid Style) -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Rugged Watch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="sturdy expedition watch with a thick leather strap and luminous hands in a rustic outdoor setting with soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnzXR93zRA3aaKFHE5Zyf7603JDMeyKrSBITZpj81ctmO7q9hia696AVd_1HjVYklOdDS9wrVm1cUHH4LM1GGMepZkjvu_cXtZsjAHZjp0L4tV81WESozPmXUnT6hoFRXZPFrLq6UkeWRTe14MNlQ5uzsLL8i-oQKV4x5BqtHxpLJZgoT53YmahG8eZjq2e9Btcn1L0AZMl9XsjSxgmYfPmEWb97Ry4L-UiZSNaWdb-o-W0pSLbqmyBw7BPld0mJF3uvq80PMD"/>
+</div>
+<span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Expedition</span>
+<h2 class="font-serif text-2xl text-on-surface mb-2">Terra Incognita</h2>
+<span class="font-sans text-lg font-light text-on-surface">$12,900</span>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-8">
+<img alt="Steel Luxury Watch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxury sports watch with a stainless steel bracelet and deep blue sunburst dial on a reflective marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClPkrDYhbMRb17rwiJU16_8IyqZI_riMlzwOI5g6YCtlAm4DZ9Yiuv-ORwqAtFxCvyRj5sEIb6NgFL92K79ZTifLUsF2qN-CeL_3fAivbaCZjfw9IEmWqiDj6HE33DlDowT2Ss689DAHeEDdKTiyLj5n2VtgWjxP8jFY0sScQVrRczW1dP00Hw9V8-S1QfbXl-s2MBE1LkCviEMGZH9eH9NRPbW_Vg7ZFZhZqUclKTkh86JiBqz32sTUoMSv2vNWbHukBzLtbd"/>
+</div>
+<span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Heritage</span>
+<h2 class="font-serif text-2xl text-on-surface mb-2">Chronicle GMT</h2>
+<span class="font-sans text-lg font-light text-on-surface">$15,400</span>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Skeleton Watch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern skeleton watch showing the internal mechanisms with a matte black ceramic finish and minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNOkdyRJ0Mia0xjxCxQoJIuwXd06UwvvYRpGiB3ztNh7hZodmevHjUUg8YdCN607bjKHWc1ZNBmQ_3NDk_b8rBGv22Z_vRs5TNU_S2DuZ6bWPQO4nW4LJElzE-OE9t2NDkU-FoFCSZhQ6y7W1Ttm8rd2m1alPBX1GZEhsagj3AX0HvCbmNLhLad5ILi2rvu4SjWWGQFwkHQusyQOYVJvEFU_bRLtgxKj0XwxjRoK7hQDKMb-iDQDjyocNdI-EEQBSi1jQiT4J6"/>
+<div class="absolute bottom-4 right-4 bg-on-surface text-surface text-[10px] tracking-widest uppercase px-3 py-1">Sold Out</div>
+</div>
+<span class="font-sans text-xs tracking-widest text-secondary uppercase mb-2 block">Modernist</span>
+<h2 class="font-serif text-2xl text-on-surface mb-2">Void Core Skeleton</h2>
+<span class="font-sans text-lg font-light text-on-surface">$31,000</span>
+</div>
+</div>
+</main>
+<!-- Newsletter / CTA -->
+<section class="py-32 bg-surface-container-low text-center px-10">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-serif text-4xl text-on-surface mb-6">Join the Elite Circle</h2>
+<p class="font-sans text-on-surface-variant mb-10">Receive exclusive early access to our most limited releases and curated horological insights.</p>
+<form class="flex flex-col md:flex-row gap-0">
+<input class="flex-grow bg-surface border-0 border-b border-outline-variant py-4 px-6 focus:ring-0 focus:border-secondary font-sans text-xs tracking-widest" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-on-surface text-surface px-12 py-4 font-sans text-xs tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-colors">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f3f3f3] dark:bg-[#121212] grid grid-cols-1 md:grid-cols-4 gap-12 px-10 py-20 w-full border-t-0">
+<div class="col-span-1 md:col-span-1">
+<div class="font-serif text-xl text-[#1a1c1c] dark:text-[#f9f9f9] mb-6">CHRONOS ELITE</div>
+<p class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] leading-relaxed">
+                Defining the pinnacle of timekeeping since 1884. Precision in every heartbeat, luxury in every second.
+            </p>
+</div>
+<div>
+<h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Heritage Series</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Expedition Tools</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Modernist Icons</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Service &amp; Repair</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Warranty Info</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Shipping &amp; Boutique Pickup</a></li>
+<li><a class="font-sans text-sm tracking-tight text-[#5f5e5e] dark:text-[#a7a5a4] hover:text-[#1a1c1c] transition-colors" href="#">Contact Concierge</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans text-xs tracking-widest uppercase font-bold text-on-surface mb-6">Social</h4>
+<div class="flex gap-4">
+<a class="material-symbols-outlined text-[#5f5e5e] hover:text-[#1a1c1c] transition-colors" data-icon="public" href="#">public</a>
+<a class="material-symbols-outlined text-[#5f5e5e] hover:text-[#1a1c1c] transition-colors" data-icon="camera" href="#">camera</a>
+<a class="material-symbols-outlined text-[#5f5e5e] hover:text-[#1a1c1c] transition-colors" data-icon="movie" href="#">movie</a>
+</div>
+<p class="mt-12 font-sans text-[10px] tracking-widest text-[#5f5e5e] dark:text-[#a7a5a4] uppercase opacity-80">© 2024 CHRONOS ELITE. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>
