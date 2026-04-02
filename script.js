@@ -79,7 +79,7 @@ const PRODUCTS = {
         series: "Expedition Collection",
         price: "$6,800.00",
         description: "Designed for the most rigorous peaks, where every second matters. The Kobold Himalaya is built with an antimagnetic inner case and a helium release valve, tested at extreme altitudes. Its oversized crown can be operated with gloves.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDxinGOPHYQoGTdJMJeuirbl1cztIVcxTZtUv0tuksrLeiZnK_ChMoog6JtxuSyGcTFn_8IxKmdyOWMFUl3cGOzdxUL41mpHcUyitjBcD3wqF1MIu1LClMcNE9j9WLm3jHH0PvV8hC3wS1wmazlTiBCA8dX1QygjOJacGevLDNNuhMeryDNjy2dsXrXASUZygzh6PJFXU37dVdS6LVxW1TEtn-uYBC_aTXbtjtZnESJgI-s9D_WnY6I6QXbyvaSwFgNpFsz2-Ca",
+        image: "https://images.voila.id/pr:sharp/rs:fit:2048:0/plain/https%3A%2F%2Fassets.voila.id%2Fvoila%2Fimages%2Fproduct%2Fomega%2F1product-220.10.41.21.03.004-Xms-2025-02-10T1650300700.jpeg@webp",
         specs: {
             "Movement": "Automatic Caliber CE-05 Explorer",
             "Case Material": "Titanium with DLC coating",
@@ -96,7 +96,7 @@ const PRODUCTS = {
         series: "Expedition Collection",
         price: "$5,950.00",
         description: "Built to withstand the unknown, merging durability with class. The Expedition features a bi-directional compass bezel and a shock-resistant movement. Its military-grade construction is paired with an olive NATO strap for field readiness.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDqiSFBla9qu7R0scHJqWOfOhCmB6qXSaLqxLBtsgEpMEUWb1hCtw6aNzca07-QK2H4yUxGUCYbYjoTEpI2-uIHz7hv1-7Blj4g0hahaEdLBJLt77gLhf7ZhF3Nzujm8VlhWC3GpC9Iz242cPjuIXfM_St0wc5mE97KU3ZMOiJwUQ5r32sAnhJAIt3DgH1K9QzlVbm3BvFQIClQb-1GTFBpFGBXLGKaocuhmrpqpnyBYUYZRvFxbR9Qieahkxg1lp9zuL1pb8uR",
+        image: "https://images.jamtangan.com/preset:sharp/resize:fit:462:492/dpr:1.5/width:462/height:492/resize:fit/plain/https://assets.jamtangan.com/images/product/seiko/SRP625K1/1l_800x800.jpg",
         specs: {
             "Movement": "Automatic Caliber CE-04 Field",
             "Case Material": "Hardened 316L Steel",
